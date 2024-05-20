@@ -13,13 +13,13 @@ def generate_diff(file_path1, file_path2):
     for key in sorted_keys:
         if key in first_file and key in second_file:
             if first_file[key] == second_file[key]:
-                diff_list += f'   {key}: {first_file[key]}\n'
+                diff_list += f'    {key}: {first_file[key]}\n'
             else:
-                diff_list += f' - {key}: {first_file[key]}\n'
-                diff_list += f' + {key}: {second_file[key]}\n'
+                diff_list += f'  - {key}: {first_file[key]}\n'
+                diff_list += f'  + {key}: {second_file[key]}\n'
         if key in first_file and key not in second_file:
-            diff_list += f' - {key}: {first_file[key]}\n'
+            diff_list += f'  - {key}: {first_file[key]}\n'
         if key in second_file and key not in first_file:
-            diff_list += f' + {key}: {second_file[key]}\n'
+            diff_list += f'  + {key}: {second_file[key]}\n'
 
     return '{\n' + diff_list.lower() + '}'
