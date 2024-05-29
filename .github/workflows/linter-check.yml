@@ -31,5 +31,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: coverage run -m pytest
+          coverageCommand: pytest --cov-report term --cov=myproj tests/
           debug: true
