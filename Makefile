@@ -18,7 +18,7 @@ package-uninstall:
 	python3 -m pip uninstall --yes dist/*.whl
 
 lint:
-		@poetry run flake8 gendiff
+	poetry run flake8 gendiff
 
 test:
-		@poetry run pytest
+	poetry run pytest
