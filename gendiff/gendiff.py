@@ -2,6 +2,8 @@
 from gendiff.parser import parser
 
 
+
+
 def generate_diff(file_path1, file_path2):
     diff_list = ''
     # first_file = dict(json.load(open('tests/fixtures/' + file_path1)))
