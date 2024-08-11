@@ -3,4 +3,4 @@ import tests.fixtures.expected as expected
 
 
 def test_flat_yaml():
-    assert generate_diff('file1.yml', 'file2.yml') == expected.SIMPLE
+    assert generate_diff('file1.yml', 'file2.yml') == expected.PLAIN
